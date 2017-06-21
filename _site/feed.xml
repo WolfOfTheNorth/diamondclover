@@ -1,5 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-20T12:35:18-04:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-06-19T22:00:06-04:00</published><updated>2017-06-19T22:00:06-04:00</updated><id>http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-20T20:56:43-04:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/06/19/Testing.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-06-19T22:00:06-04:00</published><updated>2017-06-19T22:00:06-04:00</updated><id>http://localhost:4000/jekyll/update/2017/06/19/Testing</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/19/Testing.html">&lt;h1 id=&quot;regressions&quot;&gt;Regressions&lt;/h1&gt;
+
+&lt;h1 id=&quot;simple-linear-regression&quot;&gt;Simple Linear Regression&lt;/h1&gt;
+
+&lt;h2 id=&quot;1---simple-linear-regression&quot;&gt;1 - Simple Linear Regression&lt;/h2&gt;
+&lt;p&gt;Formula: &lt;script type=&quot;math/tex&quot;&gt;y= b_{_0} + b_{_1}x_{_1}&lt;/script&gt; 
+Basically, the formula for a straight line with:
+&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; : Dependent Variable (DV)
+&lt;script type=&quot;math/tex&quot;&gt;b_{_0}&lt;/script&gt; : Constant
+&lt;script type=&quot;math/tex&quot;&gt;b_{_1}&lt;/script&gt; : Coeffiicient of IV. Represents how a unit change in &lt;script type=&quot;math/tex&quot;&gt;x_{_1}&lt;/script&gt; effects a unt change in &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.
+&lt;script type=&quot;math/tex&quot;&gt;x_{_1}&lt;/script&gt; : Independendt Variable (IV)&lt;/p&gt;
+
+&lt;p&gt;Simple Linear Regression is a method of finding a line that best fits a set of data points on the graph. 
+The methodology in getting the line of best fit is simple. Let’s say we drew a vertical line from all our points to the our guess line. The distance can be written &lt;script type=&quot;math/tex&quot;&gt;y_{_i}&lt;/script&gt; where i represents the point number. In order for the line to be the line of best fit is if the value of the following formula is the lowest it can possibly be:&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\sum&lt;/script&gt; (&lt;script type=&quot;math/tex&quot;&gt;y_{_i}&lt;/script&gt; - &lt;script type=&quot;math/tex&quot;&gt;y_{_r})^2&lt;/script&gt;  –&amp;gt; min&lt;/p&gt;
+&lt;h5&gt; Called the Orderly Least Square Method &amp;lt;/h3&amp;gt;
+
+First we need to preprocess the data using the preprocessing template:
+~~~ python
+#Importing the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+#Importing the dataset
+dataset = pd.read_csv('Data.csv')
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 3].values
+                
+#Taking care of missing data
+from sklearn.preprocessing import Imputer
+imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
+imputer = imputer.fit(X[:, 1:3])
+X[:, 1:3] = imputer.transform(X[:, 1:3])
+
+#Encoding categorical data
+#Encoding the Independent Variable
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+labelencoder_X = LabelEncoder()
+X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
+onehotencoder = OneHotEncoder(categorical_features = [0])
+X = onehotencoder.fit_transform(X).toarray()
+#Encoding the Dependent Variable
+labelencoder_y = LabelEncoder()
+y = labelencoder_y.fit_transform(y)
+
+#Splitting the dataset into the Training set and Test set
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+#Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.transform(X_test)
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train)
+~~~
+ **Note**: We do not to perform feature scaling the scikit learn library will handle that for us.
+ 
+Import the  `LinearRegression` library from SciKit-Learn.
+~~~ python 
+from sklearn.linear_model import LinearRegression
+~~~
+Create object of class and fit it to the training set 
+~~~ python
+regressor = LinearRegression()
+regressor = regressor.fit(X_train, y_train)
+~~~
+Now we need to create a vector that contains the predictions of the test set. (Contains predicted values of test set. With the matrix of text set X.
+~~~ python 
+y_pred = regressor.predict(X_test)
+~~~
+So `y_pred` will be out predicted results and `y_test` will be our actual results.
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+&lt;/h5&gt;</content><author><name></name></author><summary type="html">Regressions</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-06-19T22:00:06-04:00</published><updated>2017-06-19T22:00:06-04:00</updated><id>http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/06/19/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
