@@ -50,7 +50,6 @@ highlighter: rouge
 # library used for syntax highlighting
 
 markdown: kramdown
-<<<<<<< HEAD
 kramdown:
  input: GFM
  auto_ids: true
@@ -110,21 +109,3 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 
 # needed for sitemap.xml file only
 url: http://idratherbewriting.com
-=======
-gems:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-theme: jekyll-theme-midnight
->>>>>>> b7d3849e825b05ab022bee74d8418a9f95b3dc35
