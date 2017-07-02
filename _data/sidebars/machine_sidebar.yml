@@ -1,9 +1,7 @@
-# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
-
 entries:
 - title: sidebar
-  product: some other bar
-  version: 6.0
+  product: Machine Learning v.
+  version: 1.0
   folders:
 
   - title:
@@ -19,57 +17,104 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Data Preprocessing
     output: web, pdf
     folderitems:
 
-    - title: Get started
-      url: /index.html
-      output: web, pdf
-      type: homepage
-
-    - title: Introduction
-      url: /mydoc_introduction.html
+    - title: Importing the Dataset and Libraries
+      url: 
       output: web, pdf
 
-    - title: Supported features
-      url: /mydoc_supported_features.html
+    - title: Handling Missing Data
+      url: 
       output: web, pdf
 
-    - title: About the theme author
-      url: /mydoc_about.html
+    - title: Handling Categorical Data
+      url: 
       output: web, pdf
 
-    - title: Support
-      url: /mydoc_support.html
+    - title: Splitting Dataset into Training set and Test set
+      url: 
       output: web, pdf
 
-  - title: Release Notes
+    - title: Feature Scaling
+      url: 
+      output: web, pdf
+      
+    - title: Data Preprocessing Template
+      url: 
+      output: web, pdf
+
+  - title: Regression
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: Simple Linear Regression
+      url: 
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: Multiple Linear Regression
+      url: 
       output: web, pdf
 
-  - title: Installation
+    - title: Multiple Linear Regression
+      url: 
+      output: web, pdf
+
+    - title: Polynomial Linear Regression
+      url: 
+      output: web, pdf
+    
+    - title: Support Vector Regression (SVR)
+      url: 
+      output: web, pdf
+
+    - title: Decision Tree Regression
+      url: 
+      output: web, pdf
+
+    - title: Random Forest Regression
+      url: 
+      output: web, pdf
+
+    - title: Regression Performance
+      url: 
+      output: web, pdf
+
+  - title: Classification
     output: web, pdf
     folderitems:
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: Logistic Regression
+      url: 
       output: web, pdf
 
-    - title: Install Jekyll on Mac
-      url: /mydoc_install_jekyll_on_mac.html
+    - title: K Nearest Neighbor (KNN)
+      url: 
       output: web, pdf
 
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows.html
+    - title: Support Vector Machine (SVM)
+      url: 
+      output: web, pdf
+
+    - title: Kernal SVM
+      url: 
+      output: web, pdf
+
+    - title: Naive Bayes Theorem
+      url: 
+      output: web, pdf
+
+    - title: Decision Tree Classification
+      url: 
+      output: web, pdf
+
+    - title: Random Forest Classification
+      url: 
+      output: web, pdf
+
+    - title: Classification Performance
+      url: 
       output: web, pdf
 
   - title: Authoring
