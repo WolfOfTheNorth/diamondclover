@@ -117,16 +117,16 @@ entries:
       url: 
       output: web, pdf
 
-  - title: Authoring
+  - title: Clustering
     output: web, pdf
 
     folderitems:
-    - title: Pages
-      url: /mydoc_pages.html
+    - title: K-Means Clustering
+      url: 
       output: web, pdf
 
-    - title: Posts
-      url: /mydoc_posts.html
+    - title: Hierarchical Clustering
+      url: 
       output: web, pdf
 
     - title: Lists
