@@ -29,7 +29,7 @@ entries:
       output: web, pdf
       
     - title: Data Preprocessing Template
-      url: 
+      url: /classTemp.html
       output: web, pdf
 
   - title: Regression
@@ -37,31 +37,27 @@ entries:
     folderitems:
 
     - title: Simple Linear Regression
-      url: 
+      url: /simple-linear-regression.html
       output: web, pdf
 
     - title: Multiple Linear Regression
-      url: 
-      output: web, pdf
-
-    - title: Multiple Linear Regression
-      url: 
+      url:  /multilinear-regression.html
       output: web, pdf
 
     - title: Polynomial Linear Regression
-      url: 
+      url: /polynomial-regression.html
       output: web, pdf
     
     - title: Support Vector Regression (SVR)
-      url: 
+      url: /svr.html
       output: web, pdf
 
     - title: Decision Tree Regression
-      url: 
+      url: /decision-tree.html
       output: web, pdf
 
     - title: Random Forest Regression
-      url: 
+      url: /randomForest.html
       output: web, pdf
 
     - title: Regression Performance
@@ -73,15 +69,15 @@ entries:
     folderitems:
 
     - title: Logistic Regression
-      url: 
+      url: /logRegression.html
       output: web, pdf
 
     - title: K Nearest Neighbor (KNN)
-      url: 
+      url: knn.html
       output: web, pdf
 
     - title: Support Vector Machine (SVM)
-      url: 
+      url: svm.html
       output: web, pdf
 
     - title: Kernal SVM
@@ -89,7 +85,7 @@ entries:
       output: web, pdf
 
     - title: Naive Bayes Theorem
-      url: 
+      url: bayes.html
       output: web, pdf
 
     - title: Decision Tree Classification
