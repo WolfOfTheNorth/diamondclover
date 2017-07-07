@@ -1,7 +1,4 @@
-type: "MARKDOWN_NOTE"
-folder: "90cd79e84fed062d6507"
-title: "Preprocessing the Data"
-content: '''
+
   Preprocessing the Data
   =======================
   
@@ -38,7 +35,7 @@ content: '''
             1. `iloc[rows, : -1]` : All columns except the last one
             2. `iloc[rows, 2:13]` : All columns from 2 until 12. 13 is NOT INCLUDED
   
-  we then use the .values function to retrieve the values from the column. 
+  we then use the `.values` function to retrieve the values from the column. 
   ~~~ python
   X = dataset.iloc[:, :-1].values
   Y = dataset.iloc[:, 3]
@@ -299,8 +296,3 @@ content: '''
   sc_y = StandardScaler()
   y_train = sc_y.fit_transform(y_train)
   ~~~
-'''
-tags: []
-isStarred: false
-createdAt: "2017-06-01T19:03:34.509Z"
-updatedAt: "2017-06-05T00:22:09.115Z"
