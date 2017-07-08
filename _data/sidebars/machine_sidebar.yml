@@ -21,7 +21,7 @@ entries:
       output: web, pdf
 
     - title: Splitting Dataset into Training set and Test set
-      url: 
+      url: /split-data.html
       output: web, pdf
 
     - title: Feature Scaling
