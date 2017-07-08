@@ -13,11 +13,11 @@ entries:
       output: web, pdf
 
     - title: Handling Missing Data
-      url: 
+      url: /missing-data.html
       output: web, pdf
 
     - title: Handling Categorical Data
-      url: 
+      url: /categorical-data.html
       output: web, pdf
 
     - title: Splitting Dataset into Training set and Test set
@@ -73,11 +73,11 @@ entries:
       output: web, pdf
 
     - title: K Nearest Neighbor (KNN)
-      url: knn.html
+      url: /knn.html
       output: web, pdf
 
     - title: Support Vector Machine (SVM)
-      url: svm.html
+      url: /svm.html
       output: web, pdf
 
     - title: Kernal SVM
@@ -85,7 +85,7 @@ entries:
       output: web, pdf
 
     - title: Naive Bayes Theorem
-      url: bayes.html
+      url: /bayes.html
       output: web, pdf
 
     - title: Decision Tree Classification
