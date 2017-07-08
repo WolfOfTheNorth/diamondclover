@@ -25,11 +25,11 @@ entries:
       output: web, pdf
 
     - title: Feature Scaling
-      url: 
+      url: /feature-scaling.html
       output: web, pdf
       
     - title: Data Preprocessing Template
-      url: /classTemp.html
+      url: /preprocess.html
       output: web, pdf
 
   - title: Regression
@@ -98,6 +98,10 @@ entries:
 
     - title: Classification Performance
       url: 
+      output: web, pdf
+
+    - title: Classification Template
+      url: /classTemp.html
       output: web, pdf
 
   - title: Clustering
