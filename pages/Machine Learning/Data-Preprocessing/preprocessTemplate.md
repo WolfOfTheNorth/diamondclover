@@ -1,7 +1,7 @@
 ---
 title: Preprocessing Template
 sidebar: machine_sidebar
-permalink: /preprocess.html
+permalink: preprocess.html
 folder: Machine Learning
 ---
 
