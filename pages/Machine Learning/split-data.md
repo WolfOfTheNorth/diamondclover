@@ -11,8 +11,9 @@ folder: Machine Learning
 
 In machine learning we want to split our dataset into two parts. A training set and a test set. This is used as a way to avoid the machine learning model from relying on correleations too much. We want to do this because if the model learns about correlations that may not always exist in other datasets it may put more weight than it should on those correlations when making a prediction. The test set is meant as away for machine learning model to test it's predictions and re-adjust how it is learning.
 
-**Training Set** : The machine learning model uses this to identifiy correlations
-**Test Set** : MAchine learning model makes predictions and adjusts weight of correlation based on the how the predction relates to the actusal value.
+**Training Set** : The machine learning model uses this to identifiy correlations.
+
+**Test Set** : Machine learning model makes predictions and adjusts weight of correlation based on the how the predction relates to the actusal value.
 
 ## Performing the split in Python 
 
