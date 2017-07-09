@@ -10,17 +10,32 @@ folder: Machine Learning
 
 **CART: Classification AND Regression Trees**
 
-### Regression Trees
+## Introduction
 
+The goal of the Descision Tree Regression Algorithm is to split your data into groups. The algorithm uses something called *information entroy*, which is a mathematical proccess. The point of the algorithm is to split the data in such a way that information is added and stops spliting the data when it's unable to add any more information to the dataset. 
 
-For example, given a scatter plot with two Independent Variables $$X_{_1}$$ and $$X_{_2}$$ with 'y' being in the third dimension.
+For example, given a scatter plot with two Independent Variables $$X_{_1}$$ and $$X_{_2}$$ with 'y' being in the third dimension like seen below. 
 
+<img src="\images\machine-learning\regression\dtgraph.png" alt="Decision Tree Splits" style="width:650px;height:358px;">
+
+Each split is called a *leaf* and the final leaves are called *terminal leaves*. 
+
+So, let's say we add a new point $$X_{_1}$$ and $$X_{_2}$$ (where $$X_{_1}$$ = 30 and $$X_{_2}$$ = 150) In order to predict the 'y' value we take the average of all the values with the *terminal leaf* and that value will be assigned to our new point. 
+
+<img src="\images\machine-learning\regression\dtgraph2.png" alt="Decision Tree Splits" style="width:650px;height:358px;">
+
+So, here in this case the green boxes represent the average of the *terminal leaf*. If we take P(30, 150), our prediction for 'y' is -64.1.
+
+Another way to visulize the dataset is like this.
+
+<img src="\images\machine-learning\regression\dttree.png" alt="Decision Tree Splits" style="width:650px;height:358px;">
+
+Here, we simply follow the tree. So in the case of P(30, 150), $$X_{_1}$$ < 20 false. $$X_{_2}$$ < 170 is true. $$X_{_1}$$ < 40 is true. So the prediction will be again -64.1.
 
 
 ## Building Decision Tree Regression
 
-
-Use the Regression Template to preprocess the data
+Use the Regression Template to preprocess the data.
 
 ## Creating the Regressor 
 
@@ -35,7 +50,9 @@ regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X, y)
 ~~~
 
-The problem is that we need to make sure the resolution is higher using the template. This is because a Decision Tree is not a continous function but instead a **step wise function**
+## Visualize the dataset 
+
+The problem is that we need to make sure the resolution is higher using the template. This is because a Decision Tree is not a continous function but instead a **step wise function**.
 
 ~~~ python
 #HIGH RESOLUTION AND SMOOTHER CURVE

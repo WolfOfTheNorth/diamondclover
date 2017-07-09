@@ -15,6 +15,10 @@ Notice that there is only $$X_{_1}^n$$. So basically we are using one variable b
 
 The reason why it is still called a linear regression is because we aren't talking about the x variable but rather the b coefficients.
 
+Polynomial Regressions are typically used in data sets like this:
+<img src="\images\machine-learning\regression\prgraph.png" alt="Mountain View" style="width:304px;height:228px;">
+
+
 ## Polynomial Regression in Python 
 
 Preprocess the data with the template.
@@ -55,8 +59,6 @@ lin_reg.fit(X_poly, y)
 ~~~
 
 ## Visualizing the Linear Regression
-
-
 
 
 

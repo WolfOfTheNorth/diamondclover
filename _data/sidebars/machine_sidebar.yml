@@ -60,8 +60,12 @@ entries:
       url: /randomForest.html
       output: web, pdf
 
+    - title: Regression Template
+      url: /reg-template.html
+      output: web, pdf
+
     - title: Regression Performance
-      url: 
+      url: /rsquared.html
       output: web, pdf
 
   - title: Classification

@@ -8,6 +8,23 @@ folder: Machine Learning
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
+## Introduction
+
+Logistic Regression helps deal with predicting datasets that are more categorical. For example we wouldn't be able to use something like linear regression on a data set like this:
+
+<img src="\images\machine-learning\regression\catgraph.png" alt="Categorical Graph " style="width:450px;height:291px;">
+
+To get a better understanding of the graph we'll need to do some math. What we can do is use linear regression and set it equal to a sigmoid function. This will give us a logistic regression. What's important to understand with logistic regrssion is that the goal is **not** to predict 'y' but rather to get the **probability** of 'y'
+
+<img src="\images\machine-learning\regression\logequ.png" alt="Logistic Equation" style="width:650px;height:287px;">
+
+This new line of best fit will give the ability to predict the probabilty. So here on the 'y' axis is will go from 0 to 1 representing the probabilty of an event occuring given 'X' as seen below.
+
+<img src="\images\machine-learning\regression\logprob.png" alt="Logistic Probabilty" style="width:500px;height:279px;">
+
+If however, instead of probabilty we wanted a prediction instead, we can still achieve this. To do this, we select a line arbitrally. Typically we choose 0.5 or 50%. If the probabilty of the event occuring is below 50% we can say that the prediction of this event will not occur (therefore will be 0) and vice versa. 
+
+<img src="\images\machine-learning\regression\logpred.png" alt="Logistic Prediction" style="width:500px;height:238px;">
 
 ## Building Logistic Regression in Python
 
