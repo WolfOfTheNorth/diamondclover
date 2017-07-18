@@ -1,0 +1,46 @@
+entries:
+- title: sidebar
+  product: OpenCV v.
+  version: 1.0
+  folders:
+
+  - title: Android Mobile Vision
+    output: web, pdf
+    folderitems:
+
+    - title: Setting up OpenCV in Android Studio 
+      url: /start.html
+      output: web, pdf
+
+    - title: Configuring the camera 
+      url: 
+      output: web, pdf
+
+    - title: Call JNI Function 
+      url: 
+      output: web, pdf
+
+    - title: OpenCV and NDK Setup
+      url: 
+      output: web, pdf
+
+    - title: Face Detection (OpenCV & NDK)
+      url: 
+      output: web, pdf
+
+    - title: Human Detection (OpenCV & NDK)
+      url: 
+      output: web, pdf
+
+    - title: Facial Landmark Detection (OpenCV & Dilb)
+      url: 
+      output: web, pdf
+
+    - title: Face and Landmark Detection (Google Vision)
+      url: 
+      output: web, pdf
+
+    - title: Loading TensorFlow Model
+      url: 
+      output: web, pdf
+

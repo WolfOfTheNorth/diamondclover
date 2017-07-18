@@ -7,9 +7,17 @@ folder: Machine Learning
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-Steps
+## Introduction 
+
+Another categorical method of prediction. KNN takes a comparison approach, where new data point is compared to other points that are close by.
+
+It works as shown in the graph below. The Euchlidian distance is calculated between the 5 closest data points. And simply just assign the new data point to the category with largest number of nearest neighbors, in this case it would be category 1. 
+
+<img src="\images\machine-learning\classification\knn.png" alt="KNN" style="width:550px;height:246px;">
+
+## Steps for KNN
 1. Choose the number k of neighbors (default is usually 5) 
-2. Take the K nearest neighbors of the new data point, accoding to the Euclidean distance
+2. Take the K nearest neighbors of the new data point, accoding to the Euclidean distance (or any other distance formula)
 3. Among these K neighbors, count the number of data points in each category
 4. Assign the new data point to the category where you counted the most neighbors 
 
