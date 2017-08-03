@@ -85,7 +85,7 @@ entries:
       output: web, pdf
 
     - title: Kernal SVM
-      url: 
+      url: /kernal-svm.html
       output: web, pdf
 
     - title: Naive Bayes Theorem
