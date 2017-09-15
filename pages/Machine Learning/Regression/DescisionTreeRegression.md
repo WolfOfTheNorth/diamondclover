@@ -6,13 +6,11 @@ folder: Machine Learning
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-
-
 **CART: Classification AND Regression Trees**
 
 ## Introduction
 
-The goal of the Descision Tree Regression Algorithm is to split your data into groups. The algorithm uses something called *information entroy*, which is a mathematical proccess. The point of the algorithm is to split the data in such a way that information is added and stops spliting the data when it's unable to add any more information to the dataset. 
+The goal of the Decision Tree Regression Algorithm is to split your data into groups. The algorithm uses something called *information entropy*, which is a mathematical process. The point of the algorithm is to split the data in such a way that information is added and stops splitting the data when it's unable to add any more information to the dataset. 
 
 For example, given a scatter plot with two Independent Variables $$X_{_1}$$ and $$X_{_2}$$ with 'y' being in the third dimension like seen below. 
 
@@ -26,12 +24,11 @@ So, let's say we add a new point $$X_{_1}$$ and $$X_{_2}$$ (where $$X_{_1}$$ = 3
 
 So, here in this case the green boxes represent the average of the *terminal leaf*. If we take P(30, 150), our prediction for 'y' is -64.1.
 
-Another way to visulize the dataset is like this.
+Another way to visualize the dataset is like this.
 
 <img src="\images\machine-learning\regression\dttree.png" alt="Decision Tree Splits" style="width:650px;height:358px;">
 
 Here, we simply follow the tree. So in the case of P(30, 150), $$X_{_1}$$ < 20 false. $$X_{_2}$$ < 170 is true. $$X_{_1}$$ < 40 is true. So the prediction will be again -64.1.
-
 
 ## Building Decision Tree Regression
 

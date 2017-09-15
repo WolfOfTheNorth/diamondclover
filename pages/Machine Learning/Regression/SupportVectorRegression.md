@@ -21,16 +21,16 @@ Y = sc_y.fit_transform(y)
 
 ## Create Regressor
 
-Import the SVR class from scikit learn library
+Import the SVR class from Scikit learn library
 Create the object for SVR class
-Argumnets of SVR() class:
+Arguments of SVR() class:
 
-`kernal` : Choose between linear, polynomial, sigmoid or rbf kernal
-rbf: Gaussian Kernal. Most popular for nonlinear regressions
+`kernel`: Choose between linear, polynomial, sigmoid or rbf kernal
+rbf: Gaussian Kernel. Most popular for nonlinear regressions
 
 ~~~python 
 from sklearn.svm import SVR
-regressor = SVR(kernal='rbf')
+regressor = SVR(kernel='rbf')
 regressor.fit(X,y)
 ~~~
 
@@ -38,9 +38,10 @@ Predicting the value. We can either input an array like X_test or a single value
 
 Since however the value '6.5' is not feature scaled we will need to do that. this can be done with `sc_X.transform(6.5)`.
 To convert 6.5 into an a array just do : np.arra([[6.5]])
-However now that we feature scaled we would get the wrong value as a prediction. This is because 6.5 will be converted into a vaule like 0.303 and we would predict that value.
+However now that we feature scaled we would get the wrong value as a prediction. This is because 6.5 will be converted into a value like 0.303 and we would predict that value.
 To fix this problem we apply the `inverse_transform` method. 
 
 ~~~python 
 y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform(np.array([[6.5]]))))
 ~~~
+

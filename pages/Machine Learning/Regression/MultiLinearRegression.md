@@ -32,9 +32,11 @@ There are multiple independent variables in this case.
 
 As discussed before dummy variables are used to turn categorical data into numerical data by creating a new set of columns in which 1 represents that category being true and 0 representing that the category is false. 
 
-In Multivariable Linear Regression we add the dummy variables to our machine learning model:
+In Multivariable Linear Regression, we add the dummy variables to our machine learning model:
+
 $$y = b_{_0} + b_{_1}X_{_1} + b_{_2}X_{_2} + b_{_3}D_{_1} + b_{_4}D_{_2}$$
-where, $$D_{_0}$$ : Represents the Dummy Variable being used for our categorical data
+
+Where, $$D_{_0}$$ : Represents the Dummy Variable being used for our categorical data
 
 So, if we had, for example, a column with two cities like Tokyo and Beijing. We could split them into there own two separate categories where we define its state with a '1' or '0'. 
 
@@ -57,7 +59,7 @@ So, if we had, for example, a column with two cities like Tokyo and Beijing. We 
 |0    |1      |
 
 
-Where $$D_{_1}$$ will represent Tokyo. Here, Beijing is ignored
+Where, $$D_{_1}$$ will represent Tokyo. Here, Beijing is ignored
 
 Now, it may seem biased that we would have a variable for Tokyo and not one for Beijing. The reason for this is because when $$D_{_1}$$ is zero the entire part of that equation $$b_{_4}D_{_1}$$ will be zero. Regression models will take, by default, the dummy variable that is not included. This will make that variable act as the default situation when $$D_{_1}$$ is zero and it is included in the constant $$B_{_0}$$ instead. In this case Beijing is out constant. 
 
@@ -65,7 +67,7 @@ So basically when $$D_{_1}$$ is 1 the state is for Tokyo is true and when its '0
 
 **Dummy Variable Trap**
 
-The Dummy Variable trap occurs when we add all Dummy variable to our equation. The reason why this bad is basically because we would be duplicating a variable. This is because : $$D_{_2} = 1 - D_{_1}$$. The phenomenon where one or several independent variables in a linear regression predicts another is called multi-collinearity. As a result of this effect, the model cannot distinguish between the effect of $$D_{_1}$$ and $$D_{_2}$$ and therefore will not work properly. 
+The Dummy Variable trap occurs when we add all Dummy variable to our equation. The reason why this bad is basically because we would be duplicating a variable. This is because: $$D_{_2} = 1 - D_{_1}$$. The phenomenon where one or several independent variables in a linear regression predicts another is called multi-collinearity. As a result of this effect, the model cannot distinguish between the effect of $$D_{_1}$$ and $$D_{_2}$$ and therefore will not work properly. 
 
 ** SO ALWAYS EMIT ONE DUMMY VARIABLE ** 
 
@@ -82,7 +84,7 @@ When we have many independent variable ( $$X_{_1},X_{_2}, ... , X_{_n}$$ ) we ma
 1. All-in
 2. Backward Elimination (Stepwise Regression)
 3. Forward Elimination (Stepwise Regression)
-4. Bidirectional Elimation (Stepwise Regression)
+4. Bidirectional Elimination (Stepwise Regression)
 5. Score Comparison
 
 ## 1 - All-In Method
@@ -107,8 +109,8 @@ Using all variables.
 
 1. Select the significance level to enter the model. (SL = 0.05)
 2. Fit the simple regression models $$y ~ x_{_n}$$ . Select the one with the lowest P - Value.
-  - So we take the dependent variable and we create a regression model with EVERY single independent variable that we have. Then select out of all models the one with the lowest P - Value for the independent variables.
-3. Keep selected variable and fit all possible models with one extra predictor added to the ones you already have. (basically we started by adding a single variable in step 2 and we're adding variables to our model).
+  - So, we take the dependent variable and we create a regression model with EVERY single independent variable that we have. Then select out of all models the one with the lowest P - Value for the independent variables.
+3. Keep selected variable and fit all possible models with one extra predictor added to the ones you already have. (basically, we started by adding a single variable in step 2 and we're adding variables to our model).
 4. Consider the predictor with the lowest P-value. If P < SL --> Step 3. ELse fo to FIN
 **FIN** Model Completed
 
@@ -120,9 +122,9 @@ Using all variables.
 4. No new variables can enter and no old variables can exit. Go to FIN
 **FIN** Model is ready
 
-## 5 - All possible Models
+## 5 - All Possible Models
 
-1. Select a criterion of goodness (e.g Akaike Criterion)
+1. Select a criterion of goodness (e.g. Akaike Criterion)
 2. Construct all possible regression models (2^n -1 total combinations)
 3. Select the one with the best criterion
 **FIN**: Model is complete
@@ -132,7 +134,7 @@ Using all variables.
 
 Preprocess the data using the template from the preprocessing section.
 
-If you creates dummy variables using `OneHotEncoder` you'll need to make sure we avoid the **Dummy Variable Trap**. To do this we remove the last dummy variable from our equation 
+If you create dummy variables using `OneHotEncoder` you'll need to make sure we avoid the **Dummy Variable Trap**. To do this we remove the last dummy variable from our equation 
 
 ~~~ python
 X = [:, 1:]

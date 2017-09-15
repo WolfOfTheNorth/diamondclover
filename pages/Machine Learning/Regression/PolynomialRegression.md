@@ -8,16 +8,14 @@ folder: Machine Learning
 
 ## Polynomial Linear Regression 
 
-
 Polynomial Linear Regression Formula: $$y= b_{_0} + b_{_1}X_{_1} + b_{_2}X{_1}^ + ... + b_{_n}X_{_1}^n$$
 
-Notice that there is only $$X_{_1}^n$$. So basically we are using one variable but different powers of that varibale.
+Notice that there is only $$X_{_1}^n$$. So basically, we are using one variable but different powers of that variable.
 
 The reason why it is still called a linear regression is because we aren't talking about the x variable but rather the b coefficients.
 
 Polynomial Regressions are typically used in data sets like this:
 <img src="\images\machine-learning\regression\prgraph.png" alt="Mountain View" style="width:304px;height:228px;">
-
 
 ## Polynomial Regression in Python 
 
@@ -25,7 +23,7 @@ Preprocess the data with the template.
 
 ## Fitting Linear Regression to the dataset
 
-Import the LinearRehression class from Scikit learn. Create a variable and fit the LinearRegression object to the dataset X and y.
+Import the LinearRegression class from Scikit learn. Create a variable and fit the LinearRegression object to the dataset X and y.
 
 ~~~ python
 from sklearn.linear_model import Linear Regression
@@ -41,7 +39,7 @@ Import the PolynomialFeatures class from scikit learn library and create an obje
 from sklearn.preprocessing import PolynomialFeatues
 ~~~
 
-When using the PolynomialFeature class we will want to specify the argument degree to be whatever degree of the function we want.
+When using the PolynomialFeatures class we will want to specify the argument degree to be whatever degree of the function we want.
 We will use the fit_transform method to fit and transform X and save it as X_poly
 
 **Note** : The PolynomialFeatures class will automatically create a column of ones for the constant $$b_{_0}$$
@@ -61,7 +59,6 @@ lin_reg.fit(X_poly, y)
 ## Visualizing the Linear Regression
 
 
-
-## Visulaizing the Polynomial Regression Results 
+## Visulaizing the Polynomial Regression Results
 
 
