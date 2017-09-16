@@ -15,13 +15,13 @@ Notice that there is only $$X_{_1}^n$$. So basically, we are using one variable 
 The reason why it is still called a linear regression is because we aren't talking about the x variable but rather the b coefficients.
 
 Polynomial Regressions are typically used in data sets like this:
-<img src="\images\machine-learning\regression\prgraph.png" alt="Mountain View" style="width:304px;height:228px;">
+<img src="\images\machine-learning\regression\prgraph.png" alt="Mountain View">
 
 ## Polynomial Regression in Python 
 
 Preprocess the data with the template.
 
-## Fitting Linear Regression to the dataset
+### Fitting Linear Regression to the dataset
 
 Import the LinearRegression class from Scikit learn. Create a variable and fit the LinearRegression object to the dataset X and y.
 
@@ -31,7 +31,7 @@ lin_reg = LinearRegression()
 lin_reg.fit(X, y)
 ~~~
 
-## Fitting the Polynomial Regression Model to the dataset
+### Fitting the Polynomial Regression Model to the dataset
 
 Import the PolynomialFeatures class from scikit learn library and create an object. Fit it to the dataset.
 

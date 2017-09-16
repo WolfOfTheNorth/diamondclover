@@ -6,9 +6,10 @@ folder: Machine Learning
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-## Support Vector Regression (SVR)
+## Support Vector Regression (SVR) in Python
 
-Setup the using the Regression Template.
+Setup using the Regression Template.
+
 **FEATURE SCALING** is not done by SVR class so make sure to do it.
 
 ~~~python
@@ -19,7 +20,7 @@ X = sc_X.fit_transform(X)
 Y = sc_y.fit_transform(y)
 ~~~
 
-## Create Regressor
+### Create Regressor
 
 Import the SVR class from Scikit learn library
 Create the object for SVR class

@@ -10,9 +10,9 @@ folder: Machine Learning
 
 ## Introduction
 
-The goal of the Decision Tree Regression Algorithm is to split your data into groups. The algorithm uses something called *information entropy*, which is a mathematical process. The point of the algorithm is to split the data in such a way that information is added and stops splitting the data when it's unable to add any more information to the dataset. 
+The goal of the Decision Tree Regression Algorithm is to split your data into groups. The algorithm uses something called *information entropy*, which is a mathematical process. The point of the algorithm is to split the data in such a way that information is added in the form of groupings. It stops splitting the data when it's unable to add any more information to the dataset. 
 
-For example, given a scatter plot with two Independent Variables $$X_{_1}$$ and $$X_{_2}$$ with 'y' being in the third dimension like seen below. 
+For example, given a scatter plot with two Independent Variables $$X_{_1}$$ and $$X_{_2}$$ with 'y' being in the third dimension like seen below, we can see how by splitting the data into groups we have a clearer picture of what's going on.
 
 <img src="\images\machine-learning\regression\dtgraph.png" alt="Decision Tree Splits" style="width:650px;height:358px;">
 
@@ -34,7 +34,7 @@ Here, we simply follow the tree. So in the case of P(30, 150), $$X_{_1}$$ < 20 f
 
 Use the Regression Template to preprocess the data.
 
-## Creating the Regressor 
+### Creating the Regressor 
 
 Import the `DecisionTreeRegressor` class from the library `sklearn.tree` and create an object of the class.
 
@@ -47,7 +47,7 @@ regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X, y)
 ~~~
 
-## Visualize the dataset 
+### Visualize the dataset 
 
 The problem is that we need to make sure the resolution is higher using the template. This is because a Decision Tree is not a continous function but instead a **step wise function**.
 

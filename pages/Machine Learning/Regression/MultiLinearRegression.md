@@ -9,7 +9,7 @@ folder: Machine Learning
 
 **Multiple Linear Regression**
 
-## 1 - Intuition
+## Intuition
 
 Formula for Simple Linear Regression:
 
@@ -21,18 +21,19 @@ $$y= b_{_0} + b_{_1}x_{_1} + b_{_2}x_{_2} + ... + b_{_n}x_{_n}$$
 
 There are multiple independent variables in this case.
 
-**Assumptions for Linear Regressions which must be true**
-1. Linearity
-2. Homoscedasticity
-3. Multivariate Normality
-4. Independence of Errors
-5. Lack of Multicollinearity
+## Assumptions for Linear Regressions which must be true
 
-**2 - Dummy Variables**
+1. **Linearity** - Can be graphically represented as a straight line
+2. **Homoscedasticity** - The variance around the regression line is the same for all values of the predictor variable (X)
+3. **Multivariate Normality**
+4. **Independence of Errors**
+5. **Lack of Multicollinearity** - The lack of the phenomenon in which one predictor variable in a multiple regression model can be linearly predicted from the others with a substantial degree of accuracy.
+
+##  Dummy Variables
 
 As discussed before dummy variables are used to turn categorical data into numerical data by creating a new set of columns in which 1 represents that category being true and 0 representing that the category is false. 
 
-In Multivariable Linear Regression, we add the dummy variables to our machine learning model:
+Using Multivariable Linear Regression, we add the dummy variables to our machine learning model:
 
 $$y = b_{_0} + b_{_1}X_{_1} + b_{_2}X_{_2} + b_{_3}D_{_1} + b_{_4}D_{_2}$$
 
@@ -59,18 +60,19 @@ So, if we had, for example, a column with two cities like Tokyo and Beijing. We 
 |0    |1      |
 
 
-Where, $$D_{_1}$$ will represent Tokyo. Here, Beijing is ignored
+Here, $$D_{_1}$$ will represent Tokyo. Beijing is ignored as a dummy variable.
 
-Now, it may seem biased that we would have a variable for Tokyo and not one for Beijing. The reason for this is because when $$D_{_1}$$ is zero the entire part of that equation $$b_{_4}D_{_1}$$ will be zero. Regression models will take, by default, the dummy variable that is not included. This will make that variable act as the default situation when $$D_{_1}$$ is zero and it is included in the constant $$B_{_0}$$ instead. In this case Beijing is out constant. 
+Now, it may seem biased that we would have a variable for Tokyo and not one for Beijing. The reason for this is because when $$D_{_1}$$ is zero the entire part of that equation $$b_{_4}D_{_1}$$ will be zero. Regression models will take, by default, the dummy variable that is not included. This will make that variable act as the default situation when $$D_{_1}$$ is zero and it is included in the constant $$B_{_0}$$ instead. In this case Beijing is our constant $$B_{_0}$$. 
 
-So basically when $$D_{_1}$$ is 1 the state is for Tokyo is true and when its '0' the state corresponds to the default state (the one not included), in this case Beijing.
+So basically when $$D_{_1}$$ is 1 the state for Tokyo is true and when its '0' the state corresponds to the default state (the one not included), in this case Beijing.
+
+An even simpler way to think about it is that if we know the state of the first column (which is the state of Tokyo) we know also know the state of Beijing since they cannot occur at the same time.
 
 **Dummy Variable Trap**
 
 The Dummy Variable trap occurs when we add all Dummy variable to our equation. The reason why this bad is basically because we would be duplicating a variable. This is because: $$D_{_2} = 1 - D_{_1}$$. The phenomenon where one or several independent variables in a linear regression predicts another is called multi-collinearity. As a result of this effect, the model cannot distinguish between the effect of $$D_{_1}$$ and $$D_{_2}$$ and therefore will not work properly. 
 
-** SO ALWAYS EMIT ONE DUMMY VARIABLE ** 
-
+**SO ALWAYS EMIT ONE DUMMY VARIABLE** 
 
 ## Building a model (Step by step)
 
@@ -87,7 +89,7 @@ When we have many independent variable ( $$X_{_1},X_{_2}, ... , X_{_n}$$ ) we ma
 4. Bidirectional Elimination (Stepwise Regression)
 5. Score Comparison
 
-## 1 - All-In Method
+### 1 - All-In Method
 
 Using all variables.
 
@@ -96,7 +98,7 @@ Using all variables.
 2. Framework
 3. Preparing for a Backward Elimination
 
-## 2 - Backward Elimination
+### 2 - Backward Elimination
 
 1. Select the significance level to stay in the model (by default its 5% so, SL = 0.05).
 2. Fit the full model with all possible predictors (all independent variables).
@@ -105,7 +107,7 @@ Using all variables.
 5. Fit model without this variable. Going back to step 3.
 **FIN** : Model is ready
 
-## 3 - Forward Selection Model
+### 3 - Forward Selection Model
 
 1. Select the significance level to enter the model. (SL = 0.05)
 2. Fit the simple regression models $$y ~ x_{_n}$$ . Select the one with the lowest P - Value.
@@ -114,7 +116,7 @@ Using all variables.
 4. Consider the predictor with the lowest P-value. If P < SL --> Step 3. ELse fo to FIN
 **FIN** Model Completed
 
-## 4 - Bidirectional Elimination 
+### 4 - Bidirectional Elimination 
 
 1. Select a significance level to enter and to stay in the model (e.g: SL_Enter = 0.05, SL_Stay = 0.05)
 2. Perform the next step of FORWARD ELIMINATION (new variable has: P < SL_Enter to enter)
@@ -122,7 +124,7 @@ Using all variables.
 4. No new variables can enter and no old variables can exit. Go to FIN
 **FIN** Model is ready
 
-## 5 - All Possible Models
+### 5 - All Possible Models
 
 1. Select a criterion of goodness (e.g. Akaike Criterion)
 2. Construct all possible regression models (2^n -1 total combinations)
@@ -130,7 +132,7 @@ Using all variables.
 **FIN**: Model is complete
 
 
-## Multivariable Linear Regression Python
+# Multivariable Linear Regression Python
 
 Preprocess the data using the template from the preprocessing section.
 

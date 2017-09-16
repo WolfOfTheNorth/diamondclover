@@ -7,6 +7,8 @@ folder: Machine Learning
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+## Introduction to Simple Linear Regression
+
 Formula: $$y= b_{_0} + b_{_1}x_{_1}$$
 
 Basically, the formula for a straight line with:
@@ -21,9 +23,11 @@ Simple Linear Regression is a method of finding a line that best fits a set of d
   
 $$sum$$ ($$y_{_i}$$ - $$y_{_r})^2$$  --> min
 
-<img src="\images\machine-learning\regression\simplereg.png" alt="Simple Linear Regression" style="width:304px;height:228px;">
-
 **Called the Orderly Least Square Method**
+
+<img src="\images\machine-learning\regression\simplereg.png" alt="Simple Linear Regression">
+
+## Creating a simple Linear Regression in Python 
 
 First we need to preprocess the data using the preprocessing template:
 
