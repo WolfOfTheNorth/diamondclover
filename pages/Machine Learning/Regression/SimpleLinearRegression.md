@@ -17,10 +17,11 @@ Basically, the formula for a straight line with:
 - $$x_{_1}$$ : Independent Variable (IV)
 
   
-Simple Linear Regression is a method of finding a line that best fits a set of data points on the graph. 
-The methodology in getting the line of best fit is simple. Let's say we drew a vertical line from all our points to our guess line. The distance can be written $$y_{_i}$$ where i represents the point number. For the line to be the line of best fit is if the value of the following formula is the lowest it can possibly be:
+Simple Linear Regression is a method of finding a line that best fits a set of data points on the graph. The methodology in getting the line of best fit is simple. Let's say we drew a vertical line from all our points to our guess line. The distance can be written $$y_{_i}$$ where i represents the point number. For the line to be the line of best fit is if the value of the following formula is the lowest it can possibly be:
   
 $$sum$$ ($$y_{_i}$$ - $$y_{_r})^2$$  --> min
+
+<img src="\images\machine-learning\regression\simplereg.png" alt="Simple Linear Regression" style="width:304px;height:228px;">
 
 **Called the Orderly Least Square Method**
 
