@@ -1,0 +1,55 @@
+entries:
+- title: sidebar
+  product: CRISPR\ Cas9 V.
+  version: 1.0
+  folders:
+
+  - title: Introdction
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /overview.html
+      output: web, pdf
+
+    - title: Generating a Knock-out
+      url: /knockouts.html
+      output: web, pdf
+
+    - title: Enhancing Specificity with Cas9 Nickase
+      url: /nickase.html
+      output: web, pdf
+
+    - title: Making Precise Modifications Using HDR
+      url: /hdr.html
+      output: web, pdf
+
+    - title: Activation or Repression of Target Genes 
+      url: /activ-repress-genes.html
+      output: web, pdf
+      
+    - title: Multiplex Genome Engineering 
+      url: /multiplex.html
+      output: web, pdf
+
+    - title: Genome-Wide Screens using CRISPR/ Cas9 
+      url: /screens.html
+      output: web, pdf
+    
+    - title: Other uses of Cas9
+      url: /cas9uses.html
+      output: web, pdf
+
+    - title: Alternatives to Cas9 for CRISPR
+      url: /alt-methods.html
+      output: web, pdf
+
+  - title: Creating CRISPR Experiments
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /starting-exp.html
+      output: web, pdf
+
+
