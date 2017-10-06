@@ -93,7 +93,7 @@ entries:
       output: web, pdf
 
     - title: Decision Tree Classification
-      url: 
+      url: /dtc.html
       output: web, pdf
 
     - title: Random Forest Classification
