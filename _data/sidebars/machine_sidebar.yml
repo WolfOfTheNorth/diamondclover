@@ -97,7 +97,7 @@ entries:
       output: web, pdf
 
     - title: Random Forest Classification
-      url: 
+      url: /rfc.html
       output: web, pdf
 
     - title: Classification Performance
@@ -153,11 +153,11 @@ entries:
 
     folderitems:
     - title: Artificial Neural Networks
-      url: 
+      url: /ann.html
       output: web, pdf
 
     - title: Convolutional Neural Networks
-      url: 
+      url: /cnn.html
       output: web, pdf
 
   - title: Dimensionality Reduction 

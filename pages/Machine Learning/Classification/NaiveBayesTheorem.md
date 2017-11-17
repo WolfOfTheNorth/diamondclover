@@ -48,29 +48,29 @@ How it Works:
 
 ### Following the Example
 
-<img src="\images\machine-learning\classification\bay2.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+<img src="\images\machine-learning\classification\bay2.png" alt="Bayes Theorem Example">
 
 1. Bayes Theorem Step 1
 
     - **Prior Probabilty Calculation**
 
-    <img src="\images\machine-learning\classification\bay3.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+    <img src="\images\machine-learning\classification\bay3.png" alt="Bayes Theorem Example">
 
     - **Marginal Likehood** : Select a radius around the data point. P(X) is the probabilty of any given point to fall within that selected radius.
 
-    <img src="\images\machine-learning\classification\bay4.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+    <img src="\images\machine-learning\classification\bay4.png" alt="Bayes Theorem Example">
 
     - **Likelihood**: Same radius. P(X &#124; Walks) : Probability of the data point would be in this circle given that that datapoint walks.
 
-    <img src="\images\machine-learning\classification\bay5.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+    <img src="\images\machine-learning\classification\bay5.png" alt="Bayes Theorem Example">
 
     - **Calculate Bayes Theorem**
 
-    <img src="\images\machine-learning\classification\bay6.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+    <img src="\images\machine-learning\classification\bay6.png" alt="Bayes Theorem Example">
 
 2. Bayes Theorem Step 2 (repeat)
 
-    <img src="\images\machine-learning\classification\bay6.png" alt="Bayes Theorem Example" style="width:550px;height:246px;">
+    <img src="\images\machine-learning\classification\bay6.png" alt="Bayes Theorem Example">
 
 3. Since in this case the probability of the data point walking is greater than driving we can say that the data point is assigned to walking 
 
